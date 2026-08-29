@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: todo-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: apps/backend
+    buildCommand: pnpm install
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
