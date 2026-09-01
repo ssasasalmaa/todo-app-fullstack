@@ -5,6 +5,7 @@ import authRoutes from './routes/auth.route.js';
 import todoRoutes from './routes/todo.route.js';
 import cors from 'cors';
 import logger from './utils/logger.js';
+import errorHandler from './middleware/error.middleware.js';
 
 dotenv.config();
 
