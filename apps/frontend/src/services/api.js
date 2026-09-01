@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Buat instance axios dengan baseURL ke backend Express kita
+// Buat instance axios dengan baseURL yang otomatis menyesuaikan
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 
 // Interceptor untuk menyertakan token JWT secara otomatis di header (jika ada)
