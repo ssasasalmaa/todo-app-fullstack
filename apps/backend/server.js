@@ -19,7 +19,7 @@ app.use(cors());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/todos', todoRoutes);
-app.use(errorHandler);
+//app.use(errorHandler);
 
 app.get('/', (req, res) => {
   res.send('API Todo App is running smoothly! 🚀');
