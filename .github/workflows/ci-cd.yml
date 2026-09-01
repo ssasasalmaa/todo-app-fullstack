@@ -17,11 +17,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Dependencies & Build
-        run: |
-          npm install
-          # Kalau kamu pakai monorepo/folder terpisah, nanti kita sesuaikan bagian ini
+      - name: Install Root Dependencies
+        run: npm install
 
-      - name: Run Tests
+      - name: Install & Build Backend
         run: |
-          npm test
+          cd apps/backend
+          npm install
+
+      - name: Install & Build Frontend
+        run: |
+          cd apps/frontend
+          npm install
+          npm run build
